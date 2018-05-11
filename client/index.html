@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Live Code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>{{ heading }}</h1>
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" v-model="email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Name</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter name" v-model="name">
+        </div>
+        <button type="submit" class="btn btn-primary" @click="getToken">Submit</button>
+      </form><br>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Upload</span>
+        </div>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="inputGroupFile01">
+          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+        </div>
+          <button type="submit" class="btn btn-primary" @click="uploadImage">Upload</button>
+      </div>
+  </div>
+<script src="./vue.js"></script>
+</body>
+</html>
